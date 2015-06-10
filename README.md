@@ -1,5 +1,5 @@
 # serve-it
-Simple server to fire up web content for testing.
+Simple server to fire up static web content for testing.
 
 ```$ npm install --save-dev serve-it```
 
