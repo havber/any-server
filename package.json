@@ -4,8 +4,7 @@
   "author": "Håvard Solvik Bertelsen",
   "repository": "https://github.com/havber/static-server",
   "version": "0.0.4",
-  "devDependencies": {
-    "express": "^4.12.4",
-    "request": "^2.57.0"
+  "dependencies": {
+    "express": "^4.12.4"
   }
 }

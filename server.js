@@ -3,8 +3,7 @@ var express = require('express'),
     http = require('http').Server(app),
     port = process.argv[3] || 9000,
     config = require('./config.js'),
-    path = config[process.argv[2]]['path'],
-    request = require('request');
+    path = config[process.argv[2]]['path'];
 
 if (!path) {
     console.log('You have noot specified an application. \n' +
