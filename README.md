@@ -6,7 +6,7 @@ Simple server to fire up web content for testing.
 ## Configuration
 Copy the config-template.js into config.js. You can then do
 
-```$ node node-modules/serve-it/server.js appName portNumber(optional)```
+```$ node node-modules/serve-it/server.js <uniqueAppName> <portNumber>(optional)```
 
 where appName is a configured entry in the config.js
 
