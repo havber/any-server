@@ -1,4 +1,4 @@
-# static-server
+# dummy-server
 Simple server to fire up web content for testing.
 
 ```$ npm install --save-dev static-server```

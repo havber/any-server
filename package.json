@@ -1,5 +1,5 @@
 {
-    "name": "static-server",
+    "name": "dummy-server",
     "description": "Simple server for serving static files like HTML, CSS and javascript for dev testing.",
     "author": "Håvard Solvik Bertelsen",
     "repository": "https://github.com/havber/static-server",
