@@ -1,16 +1,23 @@
 var express = require('express'),
     app = express(),
     http = require('http').Server(app),
-    root = (typeof process.argv[2] === 'string') && process.argv[2],
-    port = process.argv[3] || 9000;
+    port = process.argv[3] || 9000,
+    config = require('./config.js'),
+    path = config[process.argv[2]]['path'],
+    request = require('request');
 
-if (!root) {
-    console.log('You have noot specified a root path. \n' +
-                'Usage: node server.js <path to root> <port number [optional]>');
+if (!path) {
+    console.log('You have noot specified an application. \n' +
+                'Usage: node server.js <appName> <port number [optional]>');
     process.exit();
 }
-app.use(express.static(root));
+
+app.use(express.static(path));
+
+// app.use(function(req, res, next) {
+//     res.end();
+// });
 
 http.listen(port, function() {
-    console.log('Serving ' + root + ' on port: ' + port);
+    console.log('Serving ' + path + ' on port: ' + port);
 });

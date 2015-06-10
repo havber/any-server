@@ -1,7 +1,11 @@
-# any-server
+# static-server
 Simple server to fire up web content for testing.
 
-Takes two arguments: absolute path to content folder and optional port number.
+```$ npm install --save-dev static-server```
 
-Usage:
-```$ node sever.js <absolute path> <port number [optional]>```
+## Configuration
+Copy the config-template.json into config.json. You can then do
+```$ node node-modules/static-server/server.js appName portNumber(optional)```
+where appName is a configured entry in the config json
+
+The default port number is 9000
