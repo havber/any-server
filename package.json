@@ -3,7 +3,7 @@
   "description": "Simple server for serving static files like HTML, CSS and javascript for dev testing.",
   "author": "Håvard Solvik Bertelsen",
   "repository": "https://github.com/havber/serve-it",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "dependencies": {
     "express": "^4.12.4",
     "prompt": "^0.2.14"
