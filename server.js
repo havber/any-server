@@ -1,22 +1,28 @@
 var express = require('express'),
     app = express(),
     http = require('http').Server(app),
-    port = process.argv[3] || 9000,
-    config = require('./config.js'),
-    path = config[process.argv[2]]['path'];
+    prompt = require('prompt'),
+    path, port;
 
-if (!path) {
-    console.log('You have noot specified an application. \n' +
-                'Usage: node server.js <appName> <port number [optional]>');
-    process.exit();
-}
+prompt.start();
 
-app.use(express.static(path));
+prompt.get(['path', 'port'], function(err, result) {
 
-// app.use(function(req, res, next) {
-//     res.end();
-// });
+    if(err) {
+        return onError(err);
+    }
 
-http.listen(port, function() {
-    console.log('Serving ' + path + ' on port: ' + port);
+    path = result.path;
+    port = result.port;
+
+    app.use(express.static(path));
+
+    http.listen(port, function() {
+        console.log('Serving ' + path + ' on port: ' + port);
+    });
 });
+
+function onError(err) {
+    console.log(err);
+    return 1;
+}

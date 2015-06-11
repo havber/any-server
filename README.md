@@ -3,11 +3,9 @@ Simple server to fire up web content for testing.
 
 ```$ npm install --save-dev serve-it```
 
-## Configuration
-Copy the config-template.js into config.js. You can then do
+## Usage
 
-```$ node node-modules/serve-it/server.js <uniqueAppName> <portNumber>(optional)```
+```$ node /path/to/serve-it/server.js```
 
-where appName is a configured entry in the config.js
-
-The default port number is 9000
+You will be prompted for path to the folder you want to serve and for
+the port number
