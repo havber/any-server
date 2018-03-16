@@ -14,7 +14,8 @@ the port number
 
 You can put the following into your projects package.json
 
-``` "scripts": {
+``` 
+"scripts": {
         "serve": "node node_modules/serve-it/server.js"
 }
 ```
