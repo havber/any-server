@@ -16,7 +16,7 @@ You can put the following into your projects package.json
 
 ``` 
 "scripts": {
-        "serve": "node node_modules/serve-it/server.js"
+  "serve": "node node_modules/serve-it/server.js"
 }
 ```
 
